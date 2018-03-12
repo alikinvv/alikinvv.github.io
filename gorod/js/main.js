@@ -1,5 +1,24 @@
 
 var timerId;
+var swiperDoing = undefined;
+
+function initSwiper() {
+    var screenWidth = $(window).width();        
+    if(screenWidth < 767 && swiperDoing == undefined) {            
+        $('.swiperMobile').each(function(){
+            swiperDoing = new Swiper(this, {  
+              pagination: {
+                el: '.swiper-pagination',
+              },
+            })
+        });        
+    } else if (screenWidth > 768 && swiperDoing != undefined) {            
+        swiperDoing.destroy();
+        swiperDoing = undefined;
+        jQuery('.swiper-wrapper').removeAttr('style');
+        jQuery('.swiper-slide').removeAttr('style');            
+    }        
+}   
 
 // svg mask animation
 function mask() {
@@ -35,6 +54,14 @@ function sameHeight(block) {
 }
 
 $(document).ready(function(){
+  initSwiper(); 
+  
+  if($(window).width() >= 768) {
+    sameHeight('.news .card__info');
+  } else {
+    $('.news .card__info').css('height','auto');
+  }
+  
 
   $('.header__search').click(function() {
     $('.header').toggleClass('search');
@@ -54,9 +81,17 @@ $(document).ready(function(){
   });
 
   var swiperCards = new Swiper('.swiperCards', {
+    slidesPerView: 3,
+    spaceBetween: 30,
     pagination: {
       el: '.swiper-pagination-programs',
     },
+    breakpoints: {
+      767: {
+        slidesPerView: 1,
+        spaceBetween: 30
+      }
+    }
   });
 
   var swiperReviews = new Swiper('.swiperReviews', {
@@ -73,7 +108,15 @@ $(document).ready(function(){
     autoplay: {
       delay: 500,
     },
+    pagination: {
+      el: '.swiper-pagination-clients',
+    },
   });
+
+  //Swiper plugin initialization
+  initSwiper();    
+  
+
 
   swiperClients.autoplay.stop();
 
@@ -95,4 +138,14 @@ $(window).on('scroll',function() {
   }
 
 });
+
+//Swiper plugin initialization on window resize
+  $(window).on('resize', function(){
+      initSwiper();   
+      if($(window).width() >= 768) {
+        sameHeight('.news .card__info');
+      } else {
+        $('.news .card__info').css('height','auto');
+      }     
+  });
 
