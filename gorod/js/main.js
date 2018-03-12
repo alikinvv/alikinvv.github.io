@@ -137,6 +137,12 @@ $(window).on('scroll',function() {
     $(window).off('scroll');
   }
 
+  if($(window).scrollTop() > 0) {
+    $('.header').addClass('scroll');
+  } else {
+    $('.header').removeClass('scroll');
+  }
+
 });
 
 //Swiper plugin initialization on window resize

@@ -205,11 +205,36 @@ button.btn {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 0;
+    padding: 40px 0 14px;
     transition: all .4s;
+    background: transparent;
     &.search {
         background: rgba(0,0,0,0.3);
-        .header__searchForm {height: 40px;}
+        .header__searchForm {height: 40px;} 
+    }
+    &.scroll {
+        position: fixed;
+        background: #fff;
+        .header__menu li a {
+            color: $mainText;
+            font-weight: bold;
+        }
+        .header__logo a {
+            background-image: url(../img/logo-color.svg);
+            &:hover, &:focus {
+                text-decoration: none;
+                background-image: url(../img/logo-color-text.svg);
+            }
+        }
+        .header__search {
+            background-image: url(../img/icons/search-gray.svg);
+        }
+        .header__searchForm .form-group input {
+            border-color: #e9e9e9;
+        }
+        .socialBlock__item-fb {background-image: url(../img/icons/fb-gray.svg);}
+        .socialBlock__item-vk {background-image: url(../img/icons/vk-gray.svg);}
+        .socialBlock__item-inst {background-image: url(../img/icons/instagram-gray.svg);}
     }
     &__logo {
         @include make-xs-column(12);
@@ -247,12 +272,19 @@ button.btn {
         }
     }    
     &__search {
+        display: inline-block;
         float: right;
         width: 19px;
+        height: 19px;
         margin-right: 14px;
-        margin-top: 3px;
+        margin-top: 2px;
         margin-left: 18px;
         cursor: pointer;
+        background-image: url(../img/icons/search.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: all .4s;
     }
     &__searchForm {
         margin-top: 18px;
@@ -274,6 +306,7 @@ button.btn {
                 font-size: 18px;
                 font-weight: 100;
                 color: #959595;
+                border: 1px solid #fff;
                 &::placeholder {font-size: 18px;font-weight: 100;color: #959595;}
                 &::-webkit-input-placeholder {font-size: 18px;font-weight: 100;color: #959595;}
                 &::-moz-placeholder {font-size: 18px;font-weight: 100;color: #959595;}
@@ -292,17 +325,22 @@ button.btn {
 .socialBlock {
     float: right;
     margin-top: 1px;
-    a {
+    &__item {
         display: inline-block;
-        padding: 0 2px;
+        margin: 0 2px;
+        width: 20px;
+        height: 20px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: all .4s;
         &:hover, &:focus {
             text-decoration: none;
             animation: rotate 300ms linear 0ms forwards;
         }
-        img {
-            width: 20px;
-            pointer-events: none;
-        }
+        &-fb {background-image: url(../img/icons/fb.svg);}
+        &-vk {background-image: url(../img/icons/vk.svg); margin-right: 3px;}
+        &-inst {background-image: url(../img/icons/instagram.svg);}
     }
 }
 
