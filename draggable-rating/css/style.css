@@ -15,7 +15,7 @@ p {
   align-items: center;
 }
 .star-item {
-  background: url(http://svgshare.com/i/1y7.svg) no-repeat center;
+  background: url(../star-red.svg) no-repeat center;
   background-size: 71%;
   width: 50px;
   height: 50px;
@@ -25,7 +25,7 @@ p {
 .star-item .star {
   position: relative;
   z-index: 2;
-  background: url(http://svgshare.com/i/1wQ.svg);
+  background: url(../star-white.svg);
   width: 50px;
   height: 50px;
   transition: transform .2s;
