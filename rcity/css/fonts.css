@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'MuseoSansCyrl';
+    src: url('../fonts/MuseoSansCyrl300/MuseoSansCyrl300.eot');
+    src: local('☺'), url('../fonts/MuseoSansCyrl300/MuseoSansCyrl300.woff') format('woff'),
+    url('../fonts/MuseoSansCyrl300/MuseoSansCyrl300.ttf') format('truetype'),
+    url('../fonts/MuseoSansCyrl300/MuseoSansCyrl300.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MuseoSansCyrl';
+    src: url('../fonts/MuseoSansCyrl700/MuseoSansCyrl700.eot');
+    src: local('☺'), url('../fonts/MuseoSansCyrl700/MuseoSansCyrl700.woff') format('woff'),
+    url('../fonts/MuseoSansCyrl700/MuseoSansCyrl700.ttf') format('truetype'),
+    url('../fonts/MuseoSansCyrl700/MuseoSansCyrl700.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MuseoSansCyrl';
+    src: url('../fonts/MuseoSansCyrl900/MuseoSansCyrl900.eot');
+    src: local('☺'), url('../fonts/MuseoSansCyrl900/MuseoSansCyrl900.woff') format('woff'),
+    url('../fonts/MuseoSansCyrl900/MuseoSansCyrl900.ttf') format('truetype'),
+    url('../fonts/MuseoSansCyrl900/MuseoSansCyrl900.svg') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?bxp9hp');
+  src:  url('../fonts/icomoon/icomoon.eot?bxp9hp#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?bxp9hp') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?bxp9hp') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?bxp9hp#icomoon') format('svg');
+  font-weight: normal; 
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-left:before {
+  content: "\e909";
+}
+.icon-arrow-right:before {
+  content: "\e90a";
+}
+.icon-fb:before {
+  content: "\e900";
+}
+.icon-instagram:before {
+  content: "\e901";
+}
+.icon-letter:before {
+  content: "\e902";
+}
+.icon-ok:before {
+  content: "\e903";
+}
+.icon-purse:before {
+  content: "\e904";
+}
+.icon-size:before {
+  content: "\e905";
+}
+.icon-star:before {
+  content: "\e906";
+}
+.icon-vk:before {
+  content: "\e907";
+}
+.icon-youtube:before {
+  content: "\e908";
+}
