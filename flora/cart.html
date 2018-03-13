@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta content="" name="description">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024">
+    <title>Корзина</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <section class="secondary-nav">
+        <div class="container-fluid">
+            <nav class="navbar navbar-default">
+                <div class="collapse navbar-collapse pull-left" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Адреса магазинов <span class="icon-arrow-down"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">ул. Леонова, 56а/1</a></li>
+                                <li><a href="#">ул. Мира, 130</a></li>
+                                <li><a href="#">ул. Карпинского, 107</a></li>
+                                <li><a href="#">ул. Пр-т Декабристов, 20/1</a></li>
+                                <li><a href="#">ул. Мира, 9а</a></li>
+                                <li><a href="#">ул. Ш. Космонавтов, 189а</a></li>
+                                <li><a href="#">ул. Свиязева, 30/2</a></li>
+                                <li><a href="#">ул. Островского, 48/1</a></li>
+                                <li class="button"><a href="#" class="btn btn-danger">Контакты</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+                <div class="collapse navbar-collapse pull-left" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Цены оптом <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Оплата</a></li>
+                        <li><a href="#">Доставка</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+                <div class="collapse navbar-collapse pull-right login-link" id="bs-example-navbar-collapse-3">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Вход</a></li>
+                        <li class="divider"></li>
+                        <li style="margin-left: 8px"><a href="#">Регистрация</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav>
+        </div>
+    </section>
+    <section class="header">
+        <div class="container-fluid">
+            <div class="header-item logo">
+                <img src="img/logo.svg" alt="">
+            </div>
+            <div class="header-item header-phone">
+                <p class="small">Розничная продажа</p>
+                <div class="phone"><p>+7 (342) <strong>20 38 737</strong></p><span class="icon-arrow-down"></span></div>
+            </div>
+            <div class="header-item">
+                <span class="icon-phone" style="display: inline-block;margin-top: -4px;"></span><p>Заказать звонок</p>
+            </div>
+            <div class="header-item">
+                <span class="icon-question"></span><p>Задать вопрос</p>
+            </div>
+            <div class="search-item header-item">
+                <div class="search input-group">
+                    <input type="text" class="search-input" title="" placeholder="Поиск">
+                    <span class="icon-search"></span>
+                </div>
+                <a href="#" class="cart-icon">
+                    <span class="cart-icon icon-cart"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="nav-categories">
+        <div class="cat-item">
+            <a href="#">
+                <img src="img/icons/plant-color.svg" alt="">
+                <span>Букеты</span>
+            </a>
+        </div>
+        <div class="cat-item">
+            <a href="#">
+                <img src="img/icons/compositions-color.svg" alt="">
+                <span>Композиции</span>
+            </a>
+        </div>
+        <div class="cat-item">
+            <a href="#">
+                <img src="img/icons/houseplant-color.svg" alt="">
+                <span>Комнатные<br>растения</span>
+            </a>
+        </div>
+        <div class="cat-item">
+            <a href="#">
+                <img src="img/icons/bear-color.svg" alt="">
+                <span>Подарки</span>
+            </a>
+        </div>
+        <div class="cat-item">
+            <a href="#">
+                <img src="img/icons/baloon-color.svg" alt="">
+                <span>Услуги</span>
+            </a>
+        </div>
+        <div class="cat-item">
+            <a href="#">
+                <img src="img/icons/stock-color.svg" alt="">
+                <span>Акции</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="cart">
+        <div class="container-fluid">
+            <div class="row">
+                <h2 class="center">Оформление заказа</h2>
+                <div class="steps col-xs-6 col-xs-offset-3">
+                    <a href="" class="step active pull-left">
+                        <div><p>1</p></div>
+                        <span>Корзина</span>
+                    </a>
+                    <a href="" class="step">
+                        <div><p>2</p></div>
+                        <span>Получатель</span>
+                    </a>
+                    <a href="" class="step pull-right">
+                        <div><p>3</p></div>
+                        <span>Отправитель</span>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <h2>Корзина</h2>
+                    <div class="cart-item">
+                        <img src="img/flowers10.jpg" alt="" class="item-img">
+                        <p>«Весенний рай»</p>
+                        <span>Арт. 56389</span>
+                        <div class="price">
+                            <div class="count custom-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <p>2370&#8381;</p>
+                            <a href="#"><span class="icon icon-close"></span></a>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <img src="img/flowers9.jpg" alt="" class="item-img">
+                        <p>«Весенний рай»</p>
+                        <span>Арт. 56389</span>
+                        <div class="price">
+                            <div class="count custom-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <p>2370&#8381;</p>
+                            <a href="#"><span class="icon icon-close"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="help type-two">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="help-wrapper">
+                            <div class="img-help"></div>
+                            <div class="inner">
+                                <p>Добавить открытку <span>(бесплатно)</span></p>
+                                <a href="#" class="btn btn-primary">Добавить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="total row">
+                <div class="total-sale col-xs-5 col-xs-offset-1">
+                    <p class="big-sale">5%</p>
+                    <div class="sale-info">
+                        <p>скидка</p>
+                        <span>При заказе от 2000 рублей. <br>
+                        Не распостроняется на акционные предложения</span>
+                    </div>
+                </div>
+                <div class="col-xs-5">
+                    <div class="total-item">
+                        <p class="info">Итого по позициям</p>
+                        <span>4740&#8381;</span>
+                    </div>
+                    <div class="total-item">
+                        <p class="info">Скидка</p>
+                        <span class="active">237&#8381;</span>
+                    </div>
+                    <div class="total-item">
+                        <p class="info">Итого</p>
+                        <span><strong>4503&#8381;</strong></span>
+                    </div>
+                </div>
+            </div>
+            <div class="next row">
+                <a href="#" class="btn btn-primary">Далее</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="footer">
+        <div class="container-fluid">
+            <div class="footer-top row">
+                <div class="logo col-xs-2 col-xs-offset-1">
+                    <img src="img/logo.svg" alt="">
+                    <p>Интернет магазин<br>цветов</p>
+                </div>
+                <div class="address col-xs-2 col-xs-offset-1">
+                    <span class="icon-point"></span>
+                    <ul>
+                        <li>Наши магазины в Перми:</li>
+                        <li>ул.Леонова, 56а/1</li>
+                        <li>ул.Мира, 130</li>
+                        <li>ул.Карпинского, 107</li>
+                        <li>ул.Пр-т Декабристов, 20/1</li>
+                    </ul>
+                </div>
+                <div class="fl-padding col-xs-2">
+                    <ul>
+                        <li>ул.Мира, 9а</li>
+                        <li>ул.Шоссе Космонавтов, 189а</li>
+                        <li>ул.Свиязева, 30/2</li>
+                        <li>ул.Островского, 48/1</li>
+                    </ul>
+                </div>
+                <div class="phones col-xs-2">
+                    <span class="icon-iphone"></span>
+                    <ul>
+                        <li>Наши телефоны:</li>
+                        <li>+7(342) 20 38 737 (розница)</li>
+                        <li>+7 (342) 223 38 88 (опт)</li>
+                    </ul>
+                    <span class="icon-mail"></span><a href="mailto:bucket@floraservis.ru">bucket@floraservis.ru</a>
+                </div>
+                <div class="fl-padding payment col-xs-2">
+                    <ul>
+                        <li>Мы принимаем:</li>
+                    </ul>
+                    <span class="icon-visa"></span><span class="icon-mastercard"></span><span class="icon-qiwi"></span><span
+                        class="icon-yandex"></span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container-fluid">
+            <div class="row">
+                <div class="footer-bottom-wrapper">
+                    <div class="copyright">
+                        <p>Flora service &#169; 2016</p>
+                    </div>
+                    <div class="social">
+                        <a href="#"><span class="icon-vk"></span></a><a href="#"><span class="icon-fb"></span></a><a href="#"><span class="icon-instagram"></span></a>
+                    </div>
+                    <div class="development">
+                        <p>разработка сайта<br><a href="http://da-group.ru/">дизайн-студия «ДА»</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+                    <h2 class="center modal-title" id="myModalLabel">Заказать звонок</h2>
+                    <form class="custom-form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Электронная почта">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Заказать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+                    <h2 class="center modal-title" id="myModalLabel2">Задать вопрос</h2>
+                    <form class="custom-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Электронная почта">
+                        </div>
+                        <div class="form-group">
+                            <textarea  class="form-control" placeholder="Ваш вопрос"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Заказать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
