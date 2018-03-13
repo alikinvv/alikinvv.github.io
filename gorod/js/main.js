@@ -2,6 +2,7 @@
 var timerId;
 var swiperDoing = undefined;
 
+// init on mobile & destroy on desktop
 function initSwiper() {
     var screenWidth = $(window).width();        
     if(screenWidth < 767 && swiperDoing == undefined) {            
@@ -61,70 +62,85 @@ $(document).ready(function(){
   } else {
     $('.news .card__info').css('height','auto');
   }
-  
+
+
+  if($(window).scrollTop() >= 15) {
+    $('.header').addClass('scroll');
+  } else if ($(window).scrollTop() <= 14) {
+    $('.header').removeClass('scroll');
+  }
 
   $('.header__search').click(function() {
     $('.header').toggleClass('search');
   });
 
   // sliders
-  var swiperNumber = new Swiper('.swiperNumber', {
-    on: {
-      slideChange: function() {
-        clearInterval(timerId);
-        mask();
+  if($('*').hasClass('swiperNumber')) {
+    var swiperNumber = new Swiper('.swiperNumber', {
+      on: {
+        slideChange: function() {
+          clearInterval(timerId);
+          mask();
+        }
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  }
+  
+  if($('*').hasClass('swiperCards')) {
+    var swiperCards = new Swiper('.swiperCards', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination-programs',
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 1,
+          spaceBetween: 30
+        }
       }
-    },
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  });
+    });
+  }
+  
+  if($('*').hasClass('swiperReviews')) {
+    var swiperReviews = new Swiper('.swiperReviews', {
+      pagination: {
+        el: '.swiper-pagination-review',
+      },
+    });
+  }
+  
+  if($('*').hasClass('swiperClients')) {
+    var swiperClients = new Swiper('.swiperClients', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      loop: true,
+      freeMode: true,
+      autoplay: {
+        delay: 500,
+      },
+      pagination: {
+        el: '.swiper-pagination-clients',
+      },
+    });
 
-  var swiperCards = new Swiper('.swiperCards', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    pagination: {
-      el: '.swiper-pagination-programs',
-    },
-    breakpoints: {
-      767: {
-        slidesPerView: 1,
-        spaceBetween: 30
-      }
-    }
-  });
+    swiperClients.autoplay.stop();
 
-  var swiperReviews = new Swiper('.swiperReviews', {
-    pagination: {
-      el: '.swiper-pagination-review',
-    },
-  });
+    $(".swiperClients").hover(function(){
+      swiperClients.autoplay.start();
+    }, function(){
+      swiperClients.autoplay.stop();
+    });
+  } 
 
-  var swiperClients = new Swiper('.swiperClients', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
-    loop: true,
-    freeMode: true,
-    autoplay: {
-      delay: 500,
-    },
-    pagination: {
-      el: '.swiper-pagination-clients',
-    },
-  });
-
-  //Swiper plugin initialization
-  initSwiper();    
+  initSwiper();
   
 
 
-  swiperClients.autoplay.stop();
-
-  $(".swiperClients").hover(function(){
-    swiperClients.autoplay.start();
-  }, function(){
-    swiperClients.autoplay.stop();
-  });
+  
 
   
 });
@@ -132,16 +148,18 @@ $(document).ready(function(){
 $(window).on('scroll',function() {
 
   // start mask animation scroll
-  if($(window).scrollTop() >= $('.features').position().top - ($('.features').outerHeight() / 2)) {
+  if($('*').hasClass('features') && $(window).scrollTop() >= $('.features').position().top - ($('.features').outerHeight() / 2)) {
     mask();
     $(window).off('scroll');
   }
 
-  if($(window).scrollTop() > 0) {
+  if($(window).scrollTop() >= 15) {
     $('.header').addClass('scroll');
-  } else {
+  } else if ($(window).scrollTop() <= 14) {
     $('.header').removeClass('scroll');
   }
+
+  console.log($(window).scrollTop());
 
 });
 

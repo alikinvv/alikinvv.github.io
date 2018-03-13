@@ -18,6 +18,11 @@ body {
 
 .container-fluid {max-width: 1048px;}
 
+h1, .h1 {
+    font-weight: 900;
+    font-size: 60px;
+}
+
 h2, .h2 {
     font-size: 37px;
     font-weight: 900;
@@ -908,6 +913,49 @@ button.btn {
         margin-top: 7px;
         a {padding: 0 4px;}
         img {width: 30px;}
+    }
+}
+
+.heroBanner {
+    color: #fff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {margin-bottom: 31px;}
+    &__subtitle {
+        font-weight: 100;
+        font-size: 24px;
+        margin: 0;
+    }
+}
+
+.subMenu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 35px 0;
+    li {
+        float: left;
+        margin: 0 28px;
+        a {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;            
+            color: #333333;
+            opacity: 0.5;
+            &:hover, &:focus {
+                text-decoration: none;
+            }
+            &.active {
+                opacity: 1;
+            }
+        }
     }
 }
 

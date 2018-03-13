@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="css/libs/swiper.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
+</head>
+<body>
+
+<section class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="header__logo" >
+                <a href="/"></a>
+            </div>
+            <nav class="header__menu">
+                <li><a href="#">Компания</a></li>
+                <li><a href="#">Мероприятия</a></li>
+                <li><a href="#">Тренеры</a></li>
+                <li><a href="#">Корпоративное обучение</a></li>
+                <li><a href="#">Контакты</a></li>
+            </nav>
+            <a class="header__search"></a>
+            <div class="socialBlock">
+                <a href="#" class="socialBlock__item socialBlock__item-fb"></a>
+                <a href="#" class="socialBlock__item socialBlock__item-vk"></a>
+                <a href="#" class="socialBlock__item socialBlock__item-inst"></a>
+            </div>            
+        </div>
+        <div class="header__searchForm row">
+            <form class="form-inline">
+              <div class="form-group">
+                <input type="text" class="form-control" id="searchInput" placeholder="Что ищем?">
+              </div>
+              <button type="submit" class="btn">Найти</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="heroBanner" style="background-image: url(img/news-banner.jpg)">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Наши новости</h1>
+                <p class="heroBanner__subtitle">Все новости на одной странице. 
+                 <br> Прочитай все самое интересное.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<nav class="subMenu">
+    <li><a href="#" class="active">Новости</a></li>
+    <li><a href="#">Команда</a></li>
+    <li><a href="#">Вакансии</a></li>
+</nav>
+
+<section class="news">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="news__wrap swiperMobile swiper-container">
+                <div class="swiper-wrapper">
+                    <a href="#" class="card card-news swiper-slide">
+                        <div class="card__img" style="background-image: url(img/banner4.jpg);"></div>
+                        <div class="card__info">
+                            <p class="card__title">Как развитие <br> личности руководителя <br> влияет на бизнес?</p>
+                            <p class="card__date">07.12.2017</p>
+                        </div>
+                    </a>
+                    <a href="#" class="card card-news swiper-slide">
+                        <div class="card__img" style="background-image: url(img/banner3.jpg);"></div>
+                        <div class="card__info">
+                            <p class="card__title">Древний миф <br> маркетинга</p>
+                            <p class="card__date">28.11.2017</p>
+                        </div>
+                    </a>
+                    <a href="#" class="card card-news swiper-slide">
+                        <div class="card__img" style="background-image: url(img/news.jpg);"></div>
+                        <div class="card__info">
+                            <p class="card__title">Что делать, если <br> клиента интересует <br> низкая цена?</p>
+                            <p class="card__date">15.11.2017</p>
+                        </div>
+                    </a>
+                    <a href="#" class="card card-news swiper-slide">
+                        <div class="card__img" style="background-image: url(img/news2.jpg);"></div>
+                        <div class="card__info">
+                            <p class="card__title">Психология <br> телефонных <br> переговоров</p>
+                            <p class="card__date">01.11.2017</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="footer__logoWrap">
+                <img src="img/logo-text.svg" alt="" class="footer__logo">
+            </div>
+            <div class="footer__links footer__links-small">
+                <ul>
+                    <li><a href="#">Компания</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Команда</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__links">
+                <ul>
+                    <li><a href="#">Мероприятия</a></li>
+                    <li><a href="#">Тренеры</a></li>
+                    <li><a href="#">Корпоративное обучение</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            <div class="footer__subscribe">
+                <div class="footer__form">
+                    <form class="form-inline">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Ваш e-mail адрес">
+                      </div>
+                      <button type="submit" class="btn btn-small">Подписаться</button>
+                    </form>
+                </div>
+                <p class="footer__terms">
+                    Подпишитесь на рассылку новостей от Каменного города. Нажимая на кнопку, вы даете согласие на обработку <br> своих <a href="#">персональных данных</a>.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="footer__addr">
+                <a href="tel:+73422060836">+7 (342) 206-08-36</a> <br>
+                <a href="mailto:info@kamgorod.com">info@kamgorod.com</a> <br>
+                г. Пермь, Сибирская улица, 35 Д <br>
+                <span>© ООО «ИКЦ «Каменный город», 2013‐2018</span> <br>
+            </div>
+            <div class="socialBlock">
+                <a href="#"><img src="img/icons/fb.svg" alt=""></a>
+                <a href="#"><img src="img/icons/vk.svg" alt=""></a>
+                <a href="#"><img src="img/icons/instagram.svg" alt=""></a>
+                <a href="#"><img src="img/icons/youtube.svg" alt=""></a>
+            </div> 
+        </div>
+    </div>
+</section>
+
+
+<script src="js/libs/jquery-1.11.1.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+<script src="js/libs/swiper.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
