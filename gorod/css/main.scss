@@ -216,6 +216,7 @@ button.btn {
     &.search {
         background: rgba(0,0,0,0.3);
         .header__searchForm {height: 40px;} 
+        .header__search {opacity: 0.6;}
     }
     &.scroll {
         position: fixed;
@@ -272,7 +273,11 @@ button.btn {
                 font-weight: 100;
                 color: #fff;
                 text-transform: uppercase;
-                &:hover, &:focus {text-decoration: none;}
+                transition: all .4s;
+                &:hover, &:focus {
+                    text-decoration: none;
+                    opacity: 0.6;
+                }
             }
         }
     }    
@@ -290,6 +295,9 @@ button.btn {
         background-position: center;
         background-size: cover;
         transition: all .4s;
+        &:hover, &:focus {
+            opacity: 0.6;
+        }
     }
     &__searchForm {
         margin-top: 18px;
@@ -330,6 +338,8 @@ button.btn {
 .socialBlock {
     float: right;
     margin-top: 1px;
+    a {transition: all .4s;}
+    a:hover, a:focus {opacity: 0.6;}
     &__item {
         display: inline-block;
         margin: 0 2px;
@@ -341,7 +351,7 @@ button.btn {
         transition: all .4s;
         &:hover, &:focus {
             text-decoration: none;
-            animation: rotate 300ms linear 0ms forwards;
+            opacity: 0.6;
         }
         &-fb {background-image: url(../img/icons/fb.svg);}
         &-vk {background-image: url(../img/icons/vk.svg); margin-right: 3px;}
@@ -533,7 +543,7 @@ button.btn {
     &:before {
         top: 48px;
         right: 0;
-        bottom: 27px;
+        bottom: 49px;
     }
 }
 
@@ -613,7 +623,7 @@ button.btn {
     &__icon {
         margin: 0 auto 51px;
         display: inline-block;
-        max-height: 110px;
+        max-height: 81px;
         pointer-events: none;
     }
     &__title {
