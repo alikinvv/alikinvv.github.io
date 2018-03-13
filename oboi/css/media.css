@@ -1,0 +1,140 @@
+@media (min-width: 1400px) {
+  .col-xlg-offset-0 {
+    margin-left: 0;
+  }
+  .col-xlg-6 {
+    width: 50%;
+  }
+  .news h2 {
+    padding-left: 0;
+  }
+  .news h2 {
+    left: 14px;
+  }
+  .catalog .col-xs-1 {
+    width: 0;
+    padding: 0;
+    margin-right: 0;
+  }
+  .catalog .col-xs-10 {
+    width: 91.66666667%;
+  }
+  .item-slider .is-wrapper .is-main {
+    width: 30.333333%;
+  }
+  .item-slider .is-wrapper .is-info .is-nav {
+    width: initial;
+  }
+  .builders .col-xs-1 {
+    display: none;
+  }
+  .question .form-inline textarea {
+    width: 82.4%;
+  }
+}
+@media (max-width: 1260px) {
+  .header .title {
+    width: 75%;
+  }
+  .catalog-preview {
+    padding: 35px 15px;
+  }
+  .news h2 {
+    padding-left: 15px;
+  }
+  .item-slider {
+    padding: 59px 15px 20px;
+  }
+  .item-slider .is-wrapper .is-info {
+    margin-left: 65px;
+  }
+  .features {
+    padding: 53px 0;
+  }
+  .reviews {
+    padding: 77px 15px;
+  }
+  .reviews .sr-item .review {
+    width: 485px;
+  }
+  .reviews h2 {
+    left: 0;
+  }
+  .footer .copyright {
+    margin: 0;
+    padding-left: 15px;
+    width: 40%;
+  }
+  .footer .developer {
+    width: 21%;
+  }
+  .col-xlg-offset-0 {
+    margin-left: 0;
+  }
+  .about .col-xlg-offset-0 {
+    width: 98%;
+  }
+  .team .col-xs-3 {
+    width: 30%;
+  }
+  .contacts-block .col-xs-offset-1 {
+    margin-left: 25px;
+  }
+  .builders h3 {
+    margin-left: 15px;
+  }
+  .builders .col-xs-1 {
+    display: none;
+  }
+  .builders .top .col-xs-7 {
+    width: 98%;
+  }
+  .builders .col-xs-7 {
+    width: 75%;
+  }
+  .builders .side {
+    margin-left: 4%;
+  }
+  .question .col-xs-offset-1 {
+    margin-left: 0;
+  }
+  .question .form-inline .form-group input {
+    padding: 6px 131px 6px 18px;
+  }
+  .question .form-inline textarea {
+    width: 99.5%;
+  }
+  .catalog {
+    overflow-x: hidden;
+  }
+  .catalog .form-inline {
+    margin-left: 7px;
+  }
+  .catalog .col-xs-10 {
+    margin-left: 7px;
+    width: 100%;
+  }
+  .custom-select-trigger {
+    padding: 0 77px 0 22px;
+  }
+  .city .col-xs-3 {
+    width: 29%;
+  }
+  .product .col-xs-offset-1 {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .others {
+    overflow-x: hidden;
+  }
+  .others .others-slick {
+    margin-left: 15px;
+    width: 98%;
+  }
+  .others .others-slick .slick-prev {
+    left: -50px;
+  }
+  .others h2 {
+    margin-left: 0;
+  }
+}

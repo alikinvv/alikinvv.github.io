@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 46.964 45.123" style="enable-background:new 0 0 46.964 45.123;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.26;}
+	.st1{clip-path:url(#SVGID_2_);}
+</style>
+<g class="st0">
+	<g>
+		<defs>
+			<path id="SVGID_1_" d="M31.897,31.175c2.906-1.092,4.117-3.515,5.662-6.277c-3.568-10.602-8.756-18.223-14.53-24.765
+				c3.601,7.258,3.614,14.772,0.04,22.544L31.897,31.175L31.897,31.175z"/>
+		</defs>
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;fill-rule:evenodd;clip-rule:evenodd;fill:#494949;"/>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st1">
+			<defs>
+				
+					<rect id="SVGID_3_" x="14.677" y="8.394" transform="matrix(0.0093 1 -1 0.0093 45.5861 -14.7543)" width="31.123" height="14.468"/>
+			</defs>
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;fill:#494949;"/>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+		</g>
+	</g>
+	<g>
+		<defs>
+			<path id="SVGID_5_" d="M1.779,24.968c4.541,9.35,14.506,14.26,28.622,8.072L19.359,21.701C30.763,3.405,4.948-6.527,0.425,14.693
+				C-0.423,18.676-0.017,21.271,1.779,24.968L1.779,24.968z"/>
+		</defs>
+		<use xlink:href="#SVGID_5_"  style="overflow:visible;fill-rule:evenodd;clip-rule:evenodd;fill:#3D3D3D;"/>
+		<clipPath id="SVGID_6_">
+			<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+		</clipPath>
+	</g>
+	<g>
+		<defs>
+			<path id="SVGID_7_" d="M46.964,41.298l-0.215-23.215C38.488,36.27,25.689,43.126,6.864,34.94
+				C22.226,46.575,35.358,47.575,46.964,41.298L46.964,41.298z"/>
+		</defs>
+		<use xlink:href="#SVGID_7_"  style="overflow:visible;fill-rule:evenodd;clip-rule:evenodd;fill:#3D3D3D;"/>
+		<clipPath id="SVGID_8_">
+			<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+		</clipPath>
+	</g>
+</g>
+</svg>
