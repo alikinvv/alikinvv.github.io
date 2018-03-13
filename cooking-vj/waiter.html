@@ -1,0 +1,508 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/dragula.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+<section class="content orders-page">
+        <div role="tabpanel" class="tab-pane" id="orders">
+            <div class="order">
+                <div class="order-header">
+                    <p class="table-number">стол №3</p>
+                    <p class="order-number">11252</p>
+                    <p class="time">10:57</p>
+                </div>
+                <ul class="order-list order-cooking swipe">
+                    <li class="order-overdue">
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Французский луковый суп</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                </ul>
+                <div class="order-footer">
+                    <a href="#" class="order-btn btn-edit"></a>
+                    <a href="#" class="order-btn btn-danger">240 Р</a>
+                </div>
+            </div>
+            <div class="order">
+                <div class="order-header">
+                    <p class="table-number">стол №4</p>
+                    <p class="order-number">11252</p>
+                    <p class="time">11:10</p>
+                </div>
+                <ul class="order-list" id="1">
+                    <li class="order-cooking">
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Цезарь</span>
+                        <span class="icon-close order-close"></span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" style="width:100%"></div>
+                        </div>
+                    </li>
+                    <li class="order-cooking">
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Помидоры с&nbsp;моцареллой</span>
+                        <span class="icon-close order-close"></span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" style="width:44%"></div>
+                        </div>
+                    </li>
+                    <li class="order-cooking">
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Стрип-Стейк из&nbsp;свинины</span>
+                        <span class="icon-close order-close"></span>
+                        <span class="status">Стрип-Стейк из&nbsp;свинины</span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:50%"></div>
+                            <div class="progress-bar progress-bar-warning" role="progressbar" style="width:30%"></div>
+                        </div>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Куриные зразы</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Французский луковый суп</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Наслаждения New&nbsp;-&nbsp;Yorke</span>
+                        <span class="icon-close order-close"></span>
+                        <span class="icon-dots-08 dragging"></span>
+                    </li>
+                </ul>
+                <div class="order-footer">
+                    <a href="#" class="order-btn btn-edit"></a>
+                    <a href="#" class="order-btn btn-danger">1375 Р</a>
+                </div>
+            </div>
+            <div class="order">
+                <div class="order-header">
+                    <p class="table-number">стол №7</p>
+                    <p class="order-number">11252</p>
+                    <p class="time">11:14</p>
+                </div>
+                <ul class="order-list" id="2">
+                    <li class="order-cooking delivered">
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Оливье 1812 года</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li class="order-cooking delivered">
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Солянка с оливками</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li class="order-cooking">
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Теплый салат с курицей</span>
+                        <span class="icon-close order-close"></span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:44%"></div>
+                            <div class="progress-bar progress-bar-warning" role="progressbar" style="width:30%"></div>
+                        </div>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Солянка с оливками</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Паста с овощной сальсой</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Лимонад Классический</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Лимонад Классический</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                </ul>
+                <div class="order-footer">
+                    <a href="#" class="order-btn btn-edit"></a>
+                    <a href="#" class="order-btn btn-danger paid">Оплачен</a>
+                </div>
+            </div>
+            <div class="order">
+                <div class="order-header">
+                    <p class="table-number">стол №5</p>
+                    <p class="order-number">11252</p>
+                    <p class="time">11:21</p>
+                </div>
+                <ul class="order-list">
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Оливье 1812 года</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Теплый салат с курицей</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Солянка с оливками</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Оливье 1812 года</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Теплый салат с курицей</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Солянка с оливками</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Паста с овощной сальсой</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Лимонад Классический</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Лимонад Классический</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Лимонад Классический</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Лимонад Классический</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                </ul>
+                <div class="order-footer">
+                    <a href="#" class="order-btn btn-edit"></a>
+                    <a href="#" class="order-btn btn-danger">997 Р</a>
+                </div>
+            </div>
+            <div class="order">
+                <div class="order-header">
+                    <p class="table-number">стол №7</p>
+                    <p class="order-number">11252</p>
+                    <p class="time">11:14</p>
+                </div>
+                <ul class="order-list">
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Оливье 1812 года</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Солянка с оливками</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li class="order-cooking">
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Теплый салат с курицей</span>
+                        <span class="icon-close order-close"></span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:44%"></div>
+                            <div class="progress-bar progress-bar-warning" role="progressbar" style="width:30%"></div>
+                        </div>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Солянка с оливками</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Паста с овощной сальсой</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Лимонад Классический</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                    <li>
+                        <span class="icon-dots-08"></span>
+                        <span class="order-name">Лимонад Классический</span>
+                        <span class="icon-close order-close"></span>
+                    </li>
+                </ul>
+                <div class="order-footer">
+                    <a href="#" class="order-btn btn-edit"></a>
+                    <a href="#" class="order-btn btn-danger paid">Оплачен</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bottom-bar orders-page">
+    <div class="info">
+        <div class="time">
+            <p>11:32</p>
+        </div>
+        <div class="name">
+            <p>Официант Подносов</p>
+        </div>
+    </div>
+</section>
+
+<div class="order-edit front">
+    <div class="edit-header">
+        <span class="icon-close"></span>
+        <h3>Редактирование заказа №11252</h3>
+        <div class="divider"></div>
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="dateInput">дата исполнения:</label>
+                <input type="text" class="form-control" id="dateInput">
+            </div>
+        </form>
+        <div class="divider"></div>
+    </div>
+    <div class="edit-content">
+        <div class="edit-menu">
+            <h3>Супы</h3>
+            <ul>
+                <li class="select-item">
+                    <span>Борщ с чесноком и зеленью</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg"><span class="icon-camera"></span></a>
+                </li>
+                <li>
+                    <span>Уха из трех рыб</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+                <li>
+                    <span>Густые Русские Щи</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+                <li>
+                    <span>Французский луковый суп</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+                <li>
+                    <span>Солянка с оливками</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="edit-menu">
+            <h3>Мясо, птица, рыба</h3>
+            <ul>
+                <li class="select-item">
+                    <span>Филе судака Су-вид</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+                <li>
+                    <span>Стрип-Стейк из свинины</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+                <li>
+                    <span>Куриное филе</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="edit-menu">
+            <h3>Салаты</h3>
+            <ul>
+                <li>
+                    <span>Цезарь</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+                <li>
+                    <span>Теплый салат с курицей</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+                <li>
+                    <span>Овощной</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="edit-menu">
+            <h3>Супы</h3>
+            <ul>
+                <li class="select-item">
+                    <span>Борщ с чесноком и зеленью</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+                <li>
+                    <span>Уха из трех рыб</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+                <li>
+                    <span>Густые Русские Щи</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+                <li>
+                    <span>Французский луковый суп</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+                <li>
+                    <span>Солянка с оливками</span>
+                    <a class="fancybox" rel="group" href="img/test.jpg" href="#"><span class="icon-camera"></span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="check order flip back">
+    <div class="order-header">
+        <p class="table-number">стол №4</p>
+        <p class="time">11:10</p>
+    </div>
+    <ul class="order-list">
+        <li>
+            <span>Цезарь</span>
+            <span class="quantity">172х2...350</span>
+        </li>
+        <li>
+            <span>Помидоры с&nbsp;моцареллой</span>
+            <span class="quantity">180х1...180</span>
+        </li>
+        <li>
+            <span>Стрип-Стейк из&nbsp;свинины</span>
+            <span class="quantity">220х1...180</span>
+        </li>
+        <li>
+            <span>Куриные<br>зразы</span>
+            <span class="quantity">180х1...180</span>
+        </li>
+        <li>
+            <span>Французский луковый суп</span>
+            <span class="quantity">150х1...180</span>
+        </li>
+        <li>
+            <span>Наслаждения New-Yorke</span>
+            <span class="quantity">180х1...180</span>
+        </li>
+    </ul>
+    <div class="total-list">
+        <ul class="order-list menu-list">
+            <li class="total">
+               <strong>
+                   <span class="menu-name">Итого</span>
+                   <span class="menu-count">1350Р</span>
+               </strong>
+            </li>
+            <li>
+                <span class="menu-name">Скидка</span>
+                <span class="menu-count">100Р</span>
+            </li>
+            <li>
+                <span class="menu-name">Наличные</span>
+                <span class="menu-count">500Р</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="calculator flip back">
+    <span class="icon-close"></span>
+    <h3>Оплата заказа №11252</h3>
+    <form>
+        <div class="form-group payment-type">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="cash" value="cash" > Наличные
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="card" value="card" checked> Карта
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="discount" value="discount"> Скидка
+                </label>
+            </div>
+        </div>
+        <div class="calc-main">
+            <div class="form-group made">
+                <label for="madeInput">внесено:</label>
+                <input type="text" class="form-control" id="madeInput" value="0" disabled>
+            </div>
+            <div class="numbers">
+                <div class="col">
+                    <button>7</button>
+                    <button>4</button>
+                    <button>1</button>
+                </div>
+                <div class="col">
+                    <button>8</button>
+                    <button>5</button>
+                    <button>2</button>
+                    <button>0</button>
+                </div>
+                <div class="col">
+                    <button>9</button>
+                    <button>6</button>
+                    <button>3</button>
+                    <button class="clear">C</button>
+                </div>
+                <div class="col preset">
+                    <button class="sum">500Р</button>
+                    <button class="sum">1000Р</button>
+                    <button class="sum">5000Р</button>
+                </div>
+            </div>
+            <button type="submit" class="btn-danger take-order">Принять</button>
+        </div>
+    </form>
+    <div class="check-ok">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+            <circle class="path circle" fill="none" stroke="#4bae4f" stroke-width="2" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+            <polyline class="path check" fill="none" stroke="#4bae4f" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+        </svg>
+        <p class="success">Great Job!</p>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/dragula.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
