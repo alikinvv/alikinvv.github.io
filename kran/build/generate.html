@@ -1,0 +1,373 @@
+<html>
+<head>
+  <title>Self Generating Website</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>if (!window.jQuery) { document.write('<script src="jquery.js"><\/script>'); }</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-61456096-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <style>
+  body {
+  font: 400 14px Roboto, sans-serif;
+  color: #36464e;
+}
+  .container-fluid {
+    max-width: 1400px;
+}
+    #speed {
+      display: none;
+      z-index: 100;
+    }
+    #pause {
+      cursor: pointer;
+    }
+    #html-text {
+      display: none;
+    }
+    .header {
+      display: none;
+    }
+    .catalog-preview {
+      display: none;
+    }
+    * {
+      transition: all 0.4s;
+    }
+
+    .header .logo {
+      position: relative;
+    }
+    pre {
+      background: none;
+      border: none;
+    }
+    .header .main-nav li a.active:after {
+  width: 100%;
+}
+.header .main-nav li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #ff6600;
+  transform: translateX(-50%);
+  -webkit-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.header .main-nav li a:hover,
+.header .main-nav li a:focus {
+  background-color: transparent;
+}
+.header .main-nav li a:hover:after,
+.header .main-nav li a:focus:after {
+  width: 100%;
+}
+a.btn-second:after {
+  background: #36464e;
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(-60deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(-60deg);
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-60deg);
+  transform: translateX(-50%) translateY(-50%) rotate(-60deg);
+}
+a.btn-second:link {
+  position: relative;
+  padding: 14px 15px;
+  color: #36464e;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 0;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+a.btn-second:link:after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+}
+a.btn-second:link:hover {
+  color: #fff;
+  text-shadow: none;
+}
+a.btn-second:link:hover:after {
+  height: 650%;
+}
+a.btn-second:visited {
+  position: relative;
+  padding: 14px 15px;
+  color: #36464e;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 0;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+a.btn-second:visited:after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+}
+a.btn-second:visited:hover {
+  color: #fff;
+  text-shadow: none;
+}
+a.btn-second:visited:hover:after {
+  height: 650%;
+}
+a.btn-second {
+  display: inline-block;
+  border: 2px solid #36464e;
+}
+  </style>
+</head>
+<body style="margin:0">
+  <div id="speed">
+    <div>
+      <h4>speed</h4>
+      <span id="pause">[pause]</span>
+    </div>
+    <span class="l">faster</span>
+    <input type="range" min="0" max="20" value="14" id="slider" class="l">
+    <span class="l" style="float: right;">slower</span>
+  </div>
+  <section class="header grey">
+    <div class="logo">
+        <div class="logo-inner">
+            <a href="/kran/"><img src="http://velescrane.ru/wp-content/themes/veles/assets/img/logo.svg" alt=""></a>
+        </div>
+    </div>
+    <div class="nav main-nav">
+        <li><a href="catalog.html">Модельный ряд</a></li>
+        <li><a href="work.html">Монтажные работы</a></li>
+        <li><a href="history.html">О нас</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+    </div>
+</section>
+<section class="catalog-preview">
+    <div class="container-fluid">
+        <div class="row">
+            <h2>мы производим различные крановые системы</h2>
+            <a class="preview-item" href="#">
+                <div class="preview-img" style="display: flex;align-items: center;">
+                    <img src="http://velescrane.ru/wp-content/themes/veles/assets/img/catalog/crane1.png" alt="" style="padding: 0 10px">
+                </div>
+                <p>Мостовой однобалочный<br>
+                    опорный кран</p>
+            </a>
+            <a class="preview-item" href="#">
+                <div class="preview-img">
+                    <img src="http://velescrane.ru/wp-content/themes/veles/assets/img/catalog/crane2.png" alt="">
+                </div>
+                <p>Мостовой однобалочный<br>
+                    подвесной кран</p>
+            </a>
+            <a class="preview-item" href="">
+                <div class="preview-img">
+                    <img src="http://velescrane.ru/wp-content/themes/veles/assets/img/catalog/crane3.png" alt="">
+                </div>
+                <p>Мостовой двухбалочный<br>
+                    опорный кран</p>
+            </a>
+            <a class="preview-item" href="#">
+                <div class="preview-img">
+                    <img src="http://velescrane.ru/wp-content/themes/veles/assets/img/catalog/crane4.png" alt="">
+                </div>
+                <p>Консольный кран</p>
+            </a>
+            <a class="preview-item" href="#">
+                <div class="preview-img">
+                    <img src="http://velescrane.ru/wp-content/themes/veles/assets/img/catalog/crane5.png" alt="">
+                </div>
+                <p>Козловой кран</p>
+            </a>
+        </div>
+        <div class="row" style="text-align: center;">
+            <a href="#" class="btn-primary">Посмотреть все</a>
+        </div>
+    </div>
+</section>
+  <script>
+  (function() {
+    var nl, openCSS, openAnim, animCount, markup, styles, time, writeStyleChar, writeStyles, paused;
+
+    text = "\n/* \n * Alikin Valery 1.0.5\n * Пример анимации сборки сайта \n * ...Lets do this. \n */\n/*\n * Для регулировки скорости используйте следующий ползунок:\n */\n#speed {\n  display: block; position: fixed;\n padding: 10px;\n  bottom: 3%; left: 2%;\n background-color: #313744;\n color: #a6c3d4;\n  box-shadow: -2px 4px 11px 0px #a7a3a3;\n width: 200px;\n border-radius: 5px\n }\n#speed h4 {\n  margin-top: 0;\n display: inline-block;\n}\n#style-text {\n width: 35%;\n height: 25%;\n overflow-x: hidden;\n overflow-y: scroll;\n position: fixed;\n right: 2%;\n bottom: 3%;\n background-color: #313744;\n color: #a6c3d4;\n padding: 10px;\n box-shadow: -2px 4px 11px 0px #a7a3a3;\n}\n.header {\n display: block;\n  width: 100%;\n  padding: 53px 0 0;\n  text-align: center;\n}\n.header.grey {\n background: #eeeae8;\n}\n.header.grey .logo-inner {\n  background-color: #eeeae8 !important;\n}\n.header .logo:before {\n  content: '';\n  display: inline-block;\n  position: absolute;\n  top: 12px;\n  right: 0;\n left: 0;\n  width: 90%;\n  height: 1px;\n  background-color: #445963;\n  z-index: 1;\n  margin: 0 auto;\n}\n.header .logo .logo-inner {\n  background-color: #fff;\n  position: relative;\n  z-index: 2;\n  display: inline-block;\n  padding: 0 25px;\n}\n.header .logo .logo-inner img {\n  width: 144px;\n  pointer-events: none;\n}\n.header .main-nav {\n  display: inline-block;\n  margin-top: 42px;\n}\n.header .main-nav li {\n  float: left;\n  margin: 0 12px;\n}\n.header .main-nav li a {\n  font-size: 14px;\n  font-weight: 300;\n  color: #36464e;\n position: relative;\n  display: block; padding: 10px 15px;\n}\n.catalog-preview {\n  display:block;\n  padding: 92px 0;\n}\n.catalog-preview h2 {\n  margin-bottom: 93px;\n}\n.catalog-preview .preview-item {\n  display: inline-block;\n  width: 20%;\n  text-align: center;\n  float: left;\n}\n.catalog-preview .preview-item p {\n  text-decoration: underline;\n  color: #36464e;\n  line-height: 18px;\n}\n.catalog-preview .preview-item .preview-img {\n  height: 170px;\n}\n.catalog-preview .preview-item .preview-img img {\n  width: 100%;\n  pointer-events: none;\n}\n.catalog-preview .btn-primary {\n  margin-top: 55px;\n  padding: 12px 32px;\n}\n.btn-primary {\n  display: inline-block;\n  background: #3e8797;\n  border-radius: 0;\n  -webkit-border-radius: 0;\n  -moz-border-radius: 0;  border: none;\n  text-transform: uppercase;\n  padding: 12px 45px;\n}\n.btn-primary:hover {\n  text-decoration: none;\n  background: #3e8797;\n}\n";
+
+    nl = true;
+    openCSS = false;
+    openAmin = false;
+    animCount = 0;
+
+    writeStyleChar = function(which) {
+      markup = $('#html-text').html();
+      styles = $('#style-text').html();
+
+      switch (which) {
+        case '@':
+          if (nl) {
+            //css
+            styles += '\n\n' + which;
+            openCSS = true;
+            openAnim = true;
+          } else if (!openCSS) {
+            //html
+            markup += which;
+          }
+        break;
+
+        case '/':
+          if (nl) {
+            //css
+            styles += '\n\n' + which;
+            openCSS = true;
+          } else if (openCSS) {
+            styles += which;
+            openCSS = false;
+          } else if (!openCSS) {
+            //html
+            markup += which;
+          }
+        break;
+
+        case '.':
+          if (nl) {
+            styles += '\n\n' + which;
+            openCSS = true;
+          } else if (openCSS) {
+            styles += which;
+          } else if (!openCSS) {
+            //html
+            markup += which;
+          }
+        break;
+
+        case '#':
+          if (nl) {
+            styles += '\n\n' + which;
+            openCSS = true;
+          } else if (openCSS) {
+            styles += which;
+          } else if (!openCSS) {
+            //html
+            markup += which;
+          }
+        break;
+
+        case '}':
+          if (openAnim) {
+            styles += which;
+            if (animCount > 1) {
+              animCount = 0;
+              openAnim = false;
+              openCSS = true;
+            } else {
+              animCount += 1;
+              openAnim = true;
+              openCSS = true;
+            }
+          } else if (openCSS) {
+            styles += which;
+            openCSS = false;
+          } else if (!openCSS) {
+            //html
+            markup += which;
+          }
+        break;
+
+        default:
+          if (openCSS) {
+            styles += which;
+          } else if (!openCSS) {
+            //html
+            markup += which;
+          }
+      }
+
+      nl = ((which === '\n') ? true : false);
+
+      $('#style-text').html(styles);
+      $('#html-text').html(markup);
+      myMarkup = $("<div />").html(markup).text();
+      $('.container').html(myMarkup);
+      $('#style-tag').html(styles);
+    };
+
+    writeStyles = function(message) {
+      if (!paused) {
+        var pre;
+        if (index < message.length) {
+          pre = document.getElementById('style-text');
+          pre.scrollTop = pre.scrollHeight;
+          pres = document.getElementById('html-text');
+          pres.scrollTop = pres.scrollHeight;
+          writeStyleChar(message[index++]);
+          setTimeout((function() {
+            writeStyles(message, time);
+          }), time);
+        }
+      }
+    };
+
+    $('body').append("  <style id=\"style-tag\"></style><div class=\"container\"></div><pre class=\"pre\" id=\"html-text\"></pre><pre class=\"pre\" id=\"style-text\"></pre>");
+
+    var time = 14;
+    index = 0;
+
+    $('#slider').on('input change', function() {
+      time = $(this).val();
+    })
+    $('#pause').on('click', function() {
+      if (paused) {
+        paused = false;
+        $(this).text('[pause]');
+        writeStyles(text);
+      } else {
+        paused = true;
+        $(this).text('[resume]');
+      }
+    })
+
+    writeStyles(text);
+
+  }).call(this);
+  </script>
+</body>
+</html>
