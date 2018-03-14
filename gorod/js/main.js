@@ -151,7 +151,6 @@ $(document).ready(function(){
     $(this).parent().parent().parent().addClass('success');
   });
 
-  
 
   
 });
