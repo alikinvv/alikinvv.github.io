@@ -1015,6 +1015,7 @@ input.form-control {
         }
         .success {
             opacity: 1;
+            z-index: 1;
         }
     }
     p {
@@ -1037,6 +1038,7 @@ input.form-control {
         transform: translate(-50%,-50%);
         transition: all .6s;
         width: 100%;
+        z-index: -1;
     }
 }
 
