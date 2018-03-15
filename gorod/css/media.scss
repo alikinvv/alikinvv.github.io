@@ -539,6 +539,36 @@
 	        padding: 22px 10px 12px 10px;
 		}
 	}
+	.features:before {
+		bottom: 30px;
+	}
+	.clients .swiper-pagination-clients {
+		display: none;
+	}
+	.footer__logoWrap {
+		width: 168px;
+	}
+	.footer .socialBlock img {
+		width: 30px;
+	}
+	.footer .socialBlock {
+		top: 124px;
+		right: initial;
+		left: 0;
+		text-align: left;
+	}
+	.footer__logoWrap {
+		margin-bottom: 78px;
+	}
+	.footer__addr span {
+		position: static;
+	}
+	.footer__addr a {
+		font-size: 16px;
+	}
+	.footer__addr {
+		line-height: 31px;
+	}
 }
 
 // for 360
@@ -554,7 +584,7 @@
 	}
 	.swiperNumber__number #mask2 path {
 		transform: scale(0.08) translate(0%, 120%);
-	}
+	}	
 }
 
 // for 320
