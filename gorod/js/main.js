@@ -1,4 +1,3 @@
-
 var timerId;
 var swiperDoing = undefined;
 
@@ -20,25 +19,6 @@ function initSwiper() {
         jQuery('.swiper-slide').removeAttr('style');            
     }        
 }   
-
-// svg mask animation
-// function mask() {
-//   $('.swiper-slide-prev .swiperNumber__img.active').removeClass('active');
-//   $('.swiper-slide-prev .swiperNumber__img:first-child').addClass('active');
-
-//   $('.swiper-slide-next .swiperNumber__img.active').removeClass('active');
-//   $('.swiper-slide-next .swiperNumber__img:first-child').addClass('active');
-  
-//   timerId = setInterval(function() {
-//     if($('.swiper-slide-active .swiperNumber__img').last().hasClass('active')) {
-//       $('.swiper-slide-active .swiperNumber__img.active').removeClass('active');
-//       $('.swiper-slide-active .swiperNumber__img:first-child').addClass('active');
-//       clearInterval(timerId);
-//     } else {
-//       $('.swiper-slide-active .swiperNumber__img.active').removeClass('active').next().addClass('active');
-//     }  
-//   }, 900);
-// }
 
 // set one height for all blocks
 function sameHeight(block) {
@@ -71,12 +51,6 @@ $(document).ready(function(){
   // sliders
   if($('*').hasClass('swiperNumber')) {
     var swiperNumber = new Swiper('.swiperNumber', {
-      // on: {
-      //   slideChange: function() {
-      //     clearInterval(timerId);
-      //     mask();
-      //   }
-      // },
       pagination: {
         el: '.swiper-pagination',
       },
@@ -147,21 +121,21 @@ $(document).ready(function(){
     $(this).parent().parent().removeClass('sh');
   });
 
-  $('.modal h2').click(function() {
-    $(this).parent().parent().parent().addClass('success');
-  });
+  if($(window).width() <= 767) {
+    $('.header .row').append('<div class="hamburger"><span></span><span></span><span></span></div>');
+  }
 
+    const hm = document.querySelector('.hamburger');
+    function addClassHm() {
+        this.classList.toggle("active");
+    }
+
+    hm.addEventListener('click', addClassHm);
 
   
 });
 
 $(document).on('scroll',function() {
-
-  // start mask animation scroll
-  // if($('*').hasClass('features') && $(window).scrollTop() >= $('.features').position().top - ($('.features').outerHeight() / 2)) {
-  //   mask();
-  //   $(window).off('scroll');
-  // }
 
   if($(window).scrollTop() >= 15) {
     $('.header').addClass('fixed').removeClass('search');
