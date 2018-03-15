@@ -305,9 +305,6 @@
 			width: auto;
 		}
 	}
-	.header__menu {
-		display: none;
-	}
 	.header__logo a {
 		width: 101px;
 	}
@@ -593,17 +590,35 @@
 // for 360
 @media (max-width: 413px) {
 	.centerText p {
-		padding: 0 15px;
+		padding: 0;
 	}
 	.swiperNumber__title {
-		padding-right: 68px;
+		padding-right: 38px;
 	}
 	.swiperNumber__number #mask1 path {
-		transform: scale(0.13) translate(98%, 87%);
+		transform: scale(0.13) translate(76%, 87%);
 	}
 	.swiperNumber__number #mask2 path {
-		transform: scale(0.08) translate(0%, 120%);
+		transform: scale(0.07) translate(0%, 151%);
 	}	
+	.swiperNumber__number #mask3 path {
+	    transform: scale(0.16) translate(-25%, 48%);
+	}
+	.swiperNumber__number #mask4 path {
+	    transform: scale(0.13) translate(-20%, 92%);
+	}
+	.doingItem__text br {
+		display: none;
+	}
+	.programs {
+		margin-bottom: 15px;
+	}
+	.banner {
+		background-size: cover;
+	}
+	.doingItem {
+		padding: 0;
+	}
 }
 
 // for 320

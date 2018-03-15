@@ -9,6 +9,7 @@ function initSwiper() {
             swiperDoing = new Swiper(this, {  
               pagination: {
                 el: '.swiper-pagination',
+                clickable: true
               },
             })
         });        
@@ -53,6 +54,7 @@ $(document).ready(function(){
     var swiperNumber = new Swiper('.swiperNumber', {
       pagination: {
         el: '.swiper-pagination',
+        clickable: true
       },
     });
   }
@@ -63,6 +65,7 @@ $(document).ready(function(){
       spaceBetween: 30,
       pagination: {
         el: '.swiper-pagination-programs',
+        clickable: true
       },
       breakpoints: {
         767: {
@@ -77,6 +80,7 @@ $(document).ready(function(){
     var swiperReviews = new Swiper('.swiperReviews', {
       pagination: {
         el: '.swiper-pagination-review',
+        clickable: true
       },
     });
   }
@@ -91,6 +95,7 @@ $(document).ready(function(){
       },
       pagination: {
         el: '.swiper-pagination-clients',
+        clickable: true
       },
     });
 
@@ -123,14 +128,13 @@ $(document).ready(function(){
 
   if($(window).width() <= 767) {
     $('.header .row').append('<div class="hamburger"><span></span><span></span><span></span></div>');
+    $('.header__menu').addClass('mobile');
   }
 
-    const hm = document.querySelector('.hamburger');
-    function addClassHm() {
-        this.classList.toggle("active");
-    }
-
-    hm.addEventListener('click', addClassHm);
+    $('.hamburger').click(function() {
+      $(this).toggleClass('active');
+      $('.header__menu').toggleClass('showMenu');
+    });
 
   
 });
@@ -144,6 +148,9 @@ $(document).on('scroll',function() {
   }
 
 });
+
+
+
 
 //Swiper plugin initialization on window resize
 $(window).on('resize', function(){
