@@ -543,7 +543,18 @@
 
 // for 360
 @media (max-width: 413px) {
-	
+	.centerText p {
+		padding: 0 15px;
+	}
+	.swiperNumber__title {
+		padding-right: 68px;
+	}
+	.swiperNumber__number #mask1 path {
+		transform: scale(0.13) translate(98%, 87%);
+	}
+	.swiperNumber__number #mask2 path {
+		transform: scale(0.08) translate(0%, 120%);
+	}
 }
 
 // for 320
