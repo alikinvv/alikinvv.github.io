@@ -545,6 +545,9 @@
 	.clients .swiper-pagination-clients {
 		display: none;
 	}
+	.footer {
+		padding: 50px 0 48px;
+	}
 	.footer__logoWrap {
 		width: 168px;
 	}
@@ -562,12 +565,14 @@
 	}
 	.footer__addr span {
 		position: static;
+		font-size: 12px;
 	}
 	.footer__addr a {
 		font-size: 16px;
 	}
 	.footer__addr {
 		line-height: 31px;
+		font-size: 16px;
 	}
 }
 
