@@ -9,6 +9,11 @@
 $mainText: #333;
 $pink: #e62565;
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     font-family: Circe, Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -28,6 +33,11 @@ h2, .h2 {
     font-weight: 900;
     text-align: center;
     &.white {color: #fff;}
+}
+
+h3, .h3 {
+    font-size: 28px;
+    font-weight: 700;
 }
 
 a {
@@ -222,7 +232,12 @@ input.form-control {
     left: 0;
     width: 100%;
     padding: 40px 0 14px;
-    background: transparent;
+    background: transparent;    
+    &-red {
+        mix-blend-mode: multiply;
+        background-blend-mode: multiply;
+        background-image: linear-gradient(to right, #e62565, #87173c 99%);
+    }
     &.search {
         background: rgba(0,0,0,0.3);
         .header__searchForm {height: 40px;} 
@@ -279,7 +294,7 @@ input.form-control {
     }
     &__menu {
         list-style-type: none;
-        margin-top: 7px;
+        margin-top: 7px;        
         &.mobile {
             position: fixed;
             top: 0;
@@ -1217,6 +1232,41 @@ input.form-control {
         span:nth-child(3){
             transform: rotate(-45deg);
             top: 13px;
+        }
+    }
+}
+
+.mapWrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    #fullMap {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .mapInfo {
+        position: absolute;
+        padding: 22px 46px 18px;
+        top: 0;
+        left: 14px;
+        margin-top: 20%;
+        width: 360px;
+        border-radius: 6px;
+        background-color: #ffffff;
+        box-shadow: -0.4px 6px 15.1px 2.9px rgba(115, 115, 115, 0.59);
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: left;
+        h3 {
+            line-height: 33px;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 30px;
+            margin-bottom: 20px;
         }
     }
 }
