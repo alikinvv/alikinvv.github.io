@@ -131,6 +131,8 @@ $(document).ready(function(){
       $('.header__menu').toggleClass('showMenu');
     });
 
+    if($('*').hasClass('mapWrap')) {
+
     var uluru = {lat: 58.007606, lng: 56.249746};
     var map = new google.maps.Map(document.getElementById('fullMap'), {
       zoom: 17,
@@ -144,6 +146,8 @@ $(document).ready(function(){
       map: map,
       icon: image
     });
+
+  };
 
 });
 
