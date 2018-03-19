@@ -131,6 +131,12 @@ $(document).ready(function(){
       $('.header__menu').toggleClass('showMenu');
     });
 
+});
+
+$( window ).load(function() {
+  $('.heroBanner').addClass('active');
+
+  if($('*').hasClass('mapWrap')) {
     google.maps.event.addDomListener(window, 'load', init);
 
     function init() {
@@ -154,10 +160,8 @@ $(document).ready(function(){
         });
     }
 
-});
+  }
 
-$( window ).load(function() {
-  $('.heroBanner').addClass('active');
 });
 
 $(document).on('scroll',function() {
