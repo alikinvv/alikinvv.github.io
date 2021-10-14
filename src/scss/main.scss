@@ -1,0 +1,142 @@
+@charset 'UTF-8';
+@import 'mixins';
+
+$trans: all 0.2s ease-in-out;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #14274e;
+    background: #f6f5f5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin-top: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    @include fcc;
+    flex-direction: column;
+}
+
+h1 {
+    @include r(1023) {
+        font-size: 100px;
+    }
+
+    @include r(767) {
+        font-size: 50px;
+    }
+    font-size: 140px;
+    margin-bottom: 20px;
+    &:hover {
+        ~ .cursor {
+            mix-blend-mode: difference;
+            transform: scale(1.5);
+            cursor: none;
+            background: #fff;
+            border-color: #fff;
+        }
+    }
+}
+
+h2 {
+    @include r(1023) {
+        font-size: 50px;
+    }
+
+    @include r(767) {
+        font-size: 30px;
+    }
+    font-size: 60px;
+    color: #394867;
+
+    &:hover {
+        ~ .cursor {
+            mix-blend-mode: difference;
+            transform: scale(1.5);
+            cursor: none;
+            background: #fff;
+            border-color: #fff;
+        }
+    }
+}
+
+.button {
+    --light: #fff;
+    --dark: #414856;
+    --border: #c3c8de;
+    --background: #389ce9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 0;
+    padding: 0 30px;
+    width: auto;
+    height: 60px;
+    border-radius: 2px;
+    border: 1px solid var(--border);
+    background: none;
+    color: var(--dark);
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 10px 30px rgba(#414856, 0.1);
+    transition: transform 0.1s linear, color 0.1s linear, background 0.15s linear;
+    cursor: none;
+    text-decoration: none;
+
+    > span {
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        transition: transform 0.15s linear;
+    }
+    &.fill {
+        border: 0;
+        color: var(--light);
+        background: var(--background);
+    }
+}
+
+.cursor {
+    --cursor: #c3c8de;
+    position: fixed;
+    top: -50px;
+    z-index: 99;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: none;
+    border: solid 2px var(--cursor);
+    pointer-events: none;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+[cursor='link'] {
+    &:hover {
+        ~ .cursor {
+            mix-blend-mode: difference;
+            transform: scale(1.5);
+            cursor: none;
+            background: #fff;
+            border-color: #fff;
+        }
+    }
+}
+
+svg {
+    margin-right: 15px;
+}
